@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -47,8 +47,8 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../spritz/Cancelable.html" title="interface in spritz"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../spritz/MulticastSubject.html" title="class in spritz"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../spritz/ConnectableStream.html" title="class in spritz"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../spritz/Scheduler.html" title="class in spritz"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../index.html?spritz/EventEmitter.html" target="_top">Frames</a></li>
@@ -98,16 +98,13 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <dl>
-<dt>All Known Subinterfaces:</dt>
-<dd><a href="../spritz/SourceCreator.Observer.html" title="interface in spritz">SourceCreator.Observer</a>&lt;T&gt;, <a href="../spritz/Subject.html" title="interface in spritz">Subject</a>&lt;T&gt;</dd>
-</dl>
-<dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../spritz/MulticastSubject.html" title="class in spritz">MulticastSubject</a></dd>
+<dd><a href="../spritz/Subject.html" title="class in spritz">Subject</a></dd>
 </dl>
 <hr>
 <br>
-<pre>public interface <a href="../src-html/spritz/EventEmitter.html#line.5">EventEmitter</a>&lt;T&gt;</pre>
+<pre>public interface <a href="../src-html/spritz/EventEmitter.html#line.8">EventEmitter</a>&lt;T&gt;</pre>
+<div class="block">Interface for elements that can emit events.</div>
 </li>
 </ul>
 </div>
@@ -128,15 +125,27 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/EventEmitter.html#complete--">complete</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/EventEmitter.html#complete--">complete</a></span>()</code>
+<div class="block">Emit a complete signal.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/EventEmitter.html#error-java.lang.Throwable-">error</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;error)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/EventEmitter.html#error-java.lang.Throwable-">error</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;error)</code>
+<div class="block">Emit an error signal.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/EventEmitter.html#isDone--">isDone</a></span>()</code>
+<div class="block">Return true if the emitter has emitted an error signal, a complete signal or has been cancelled.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/EventEmitter.html#next-T-">next</a></span>(<a href="../spritz/EventEmitter.html" title="type parameter in EventEmitter">T</a>&nbsp;item)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/EventEmitter.html#next-T-">next</a></span>(<a href="../spritz/EventEmitter.html" title="type parameter in EventEmitter">T</a>&nbsp;item)</code>
+<div class="block">Emit a data item.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -161,7 +170,13 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>next</h4>
-<pre>void&nbsp;<a href="../src-html/spritz/EventEmitter.html#line.7">next</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="../spritz/EventEmitter.html" title="type parameter in EventEmitter">T</a>&nbsp;item)</pre>
+<pre>void&nbsp;<a href="../src-html/spritz/EventEmitter.html#line.16">next</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="../spritz/EventEmitter.html" title="type parameter in EventEmitter">T</a>&nbsp;item)</pre>
+<div class="block">Emit a data item.
+ This method will be ignored if <a href="../spritz/EventEmitter.html#isDone--"><code>isDone()</code></a> returns <code>true</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>item</code> - the data item.</dd>
+</dl>
 </li>
 </ul>
 <a name="error-java.lang.Throwable-">
@@ -170,16 +185,38 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>error</h4>
-<pre>void&nbsp;<a href="../src-html/spritz/EventEmitter.html#line.9">error</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;error)</pre>
+<pre>void&nbsp;<a href="../src-html/spritz/EventEmitter.html#line.24">error</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;error)</pre>
+<div class="block">Emit an error signal.
+ This method will be ignored if <a href="../spritz/EventEmitter.html#isDone--"><code>isDone()</code></a> returns <code>true</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>error</code> - the error.</dd>
+</dl>
 </li>
 </ul>
 <a name="complete--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>complete</h4>
-<pre>void&nbsp;<a href="../src-html/spritz/EventEmitter.html#line.11">complete</a>()</pre>
+<pre>void&nbsp;<a href="../src-html/spritz/EventEmitter.html#line.30">complete</a>()</pre>
+<div class="block">Emit a complete signal.
+ This method will be ignored if <a href="../spritz/EventEmitter.html#isDone--"><code>isDone()</code></a> returns <code>true</code>.</div>
+</li>
+</ul>
+<a name="isDone--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isDone</h4>
+<pre>boolean&nbsp;<a href="../src-html/spritz/EventEmitter.html#line.37">isDone</a>()</pre>
+<div class="block">Return true if the emitter has emitted an error signal, a complete signal or has been cancelled.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if the emitter has emitted an error signal, a complete signal or has been cancelled.</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -209,8 +246,8 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../spritz/Cancelable.html" title="interface in spritz"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../spritz/MulticastSubject.html" title="class in spritz"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../spritz/ConnectableStream.html" title="class in spritz"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../spritz/Scheduler.html" title="class in spritz"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../index.html?spritz/EventEmitter.html" target="_top">Frames</a></li>

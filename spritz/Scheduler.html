@@ -47,7 +47,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../spritz/Publisher.html" title="interface in spritz"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../spritz/EventEmitter.html" title="interface in spritz"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../spritz/SourceCreator.html" title="interface in spritz"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public final class <a href="../src-html/spritz/Scheduler.html#line.24">Scheduler</a>
+<pre>public final class <a href="../src-html/spritz/Scheduler.html#line.25">Scheduler</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">The scheduler is responsible for scheduling and executing tasks asynchronously.
  The scheduler provides an "abstract asynchronous boundary" to stream operators.
@@ -264,7 +264,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>now</h4>
-<pre>public static&nbsp;int&nbsp;<a href="../src-html/spritz/Scheduler.html#line.35">now</a>()</pre>
+<pre>public static&nbsp;int&nbsp;<a href="../src-html/spritz/Scheduler.html#line.36">now</a>()</pre>
 <div class="block">Return a value representing the "current time" of the scheduler.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -278,7 +278,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>schedule</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/Cancelable.html" title="interface in spritz">Cancelable</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.48">schedule</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/Cancelable.html" title="interface in spritz">Cancelable</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.49">schedule</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                            int&nbsp;delay)</pre>
 <div class="block">Schedules the execution of the given task after a specified delay.</div>
 <dl>
@@ -296,7 +296,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleAtFixedRate</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/Cancelable.html" title="interface in spritz">Cancelable</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.61">scheduleAtFixedRate</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/Cancelable.html" title="interface in spritz">Cancelable</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.62">scheduleAtFixedRate</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                                       int&nbsp;period)</pre>
 <div class="block">Schedules the periodic execution of the given task with specified period.</div>
 <dl>
@@ -314,7 +314,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>current</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.72">current</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.73">current</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
 <div class="block">Queue the task to execute on the current VPU.
  This method MUST NOT be invoked if there is no <a href="../spritz/VirtualProcessorUnit.html" title="class in spritz"><code>VirtualProcessorUnit</code></a> activated.</div>
 <dl>
@@ -329,8 +329,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>currentVpu</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.84">currentVpu</a>()</pre>
-<div class="block">Return the current VPU.</div>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.86">currentVpu</a>()</pre>
+<div class="block">Return the current VPU.
+ If VPU is active then a "direct" VPU will be returned will execute task in the current execution context.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current VPU.</dd>
@@ -345,7 +346,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>macroTask</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.96">macroTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.98">macroTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
 <div class="block">Queue the task to execute in the next "macro" task.
  This is the default VPU in the browser and indicates tasks that are scheduled via a
  call to <code>setTimeout(callback,0)</code>.</div>
@@ -361,7 +362,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>macroTaskVpu</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.108">macroTaskVpu</a>()</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.110">macroTaskVpu</a>()</pre>
 <div class="block">Return the "macro" task VPU.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -377,7 +378,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>microTask</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.120">microTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.136">microTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
 <div class="block">Queue the task to execute in the next "micro" task.
  The "micro" tasks are those that the browser executes after the current "macro" or "micro" task.
  This VPU schedules an activation via a call to <code>Promise.resolve().then( v -&gt; callback() )</code>.</div>
@@ -393,7 +394,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>microTaskVpu</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.132">microTaskVpu</a>()</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.148">microTaskVpu</a>()</pre>
 <div class="block">Return the "micro" task VPU.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -409,7 +410,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>animationFrame</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.144">animationFrame</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.160">animationFrame</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
 <div class="block">Queue the task to execute in the next "animationFrame".
  The "animationFrame" occurs prior to the next render frame.
  This VPU schedules an activation via a call to <code>requestAnimationFrame( callback )</code>.</div>
@@ -425,7 +426,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>animationFrameVpu</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.156">animationFrameVpu</a>()</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.172">animationFrameVpu</a>()</pre>
 <div class="block">Return the "animationFrame" VPU.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -441,7 +442,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>afterFrame</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.168">afterFrame</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.184">afterFrame</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
 <div class="block">Queue the task to execute after the next browser render.
  The "afterFrame" tasks are invoked after the next frames render by responding to a message on a
  MessageChannel that is sent in <code>requestAnimationFrame()</code>.</div>
@@ -457,7 +458,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>afterFrameVpu</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.180">afterFrameVpu</a>()</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.196">afterFrameVpu</a>()</pre>
 <div class="block">Return the "afterFrame" VPU.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -473,7 +474,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>onIdle</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.196">onIdle</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/Scheduler.html#line.212">onIdle</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
 <div class="block">Queue the task to execute when the browser is idle.
  The browser activates the onIdle VirtualProcessorUnit when idle and will pass the
  duration for which the VPU may run. The VPU will execute tasks as long as there is tasks
@@ -493,7 +494,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>onIdleVpu</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.208">onIdleVpu</a>()</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public static&nbsp;<a href="../spritz/VirtualProcessorUnit.html" title="class in spritz">VirtualProcessorUnit</a>&nbsp;<a href="../src-html/spritz/Scheduler.html#line.224">onIdleVpu</a>()</pre>
 <div class="block">Return the "onIdle" VPU.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -530,7 +531,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../spritz/Publisher.html" title="interface in spritz"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../spritz/EventEmitter.html" title="interface in spritz"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../spritz/SourceCreator.html" title="interface in spritz"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

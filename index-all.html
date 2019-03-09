@@ -33,7 +33,7 @@
 <li><a href="overview-summary.html">Overview</a></li>
 <li><a href="spritz/package-summary.html">Package</a></li>
 <li>Class</li>
-<li><a href="spritz/package-tree.html">Tree</a></li>
+<li><a href="overview-tree.html">Tree</a></li>
 <li><a href="deprecated-list.html">Deprecated</a></li>
 <li class="navBarCell1Rev">Index</li>
 <li><a href="help-doc.html">Help</a></li>
@@ -188,7 +188,13 @@
 <div class="block">Interface identifying a resource that can be cancelled.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="spritz/EventEmitter.html#complete--">complete()</a></span> - Method in interface spritz.<a href="spritz/EventEmitter.html" title="interface in spritz">EventEmitter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Emit a complete signal.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Subject.html#complete--">complete()</a></span> - Method in class spritz.<a href="spritz/Subject.html" title="class in spritz">Subject</a></dt>
+<dd>
+<div class="block">Emit a complete signal.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#compose-java.util.function.Function-">compose(Function&lt;Stream&lt;T&gt;, S&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
 <div class="block">Compost this stream with another stream and return the new stream.</div>
@@ -200,7 +206,11 @@
 <div class="block">Map each input item to a stream and then concatenate the items emitted by the mapped stream
  into this stream.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="spritz/SourceCreator.html#create-spritz.SourceCreator.Observer-">create(SourceCreator.Observer&lt;T&gt;)</a></span> - Method in interface spritz.<a href="spritz/SourceCreator.html" title="interface in spritz">SourceCreator</a></dt>
+<dt><span class="memberNameLink"><a href="spritz/ConnectableStream.html#connect--">connect()</a></span> - Method in class spritz.<a href="spritz/ConnectableStream.html" title="class in spritz">ConnectableStream</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="spritz/ConnectableStream.html" title="class in spritz"><span class="typeNameLink">ConnectableStream</span></a>&lt;<a href="spritz/ConnectableStream.html" title="type parameter in ConnectableStream">T</a>&gt; - Class in <a href="spritz/package-summary.html">spritz</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="spritz/SourceCreator.html#create-spritz.EventEmitter-">create(EventEmitter&lt;T&gt;)</a></span> - Method in interface spritz.<a href="spritz/SourceCreator.html" title="interface in spritz">SourceCreator</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#create-spritz.SourceCreator-">create(SourceCreator&lt;T&gt;)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
@@ -214,6 +224,10 @@
 <dd>
 <div class="block">Queue the task to execute on the current VPU.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#currentValueSubject-T-">currentValueSubject(T)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#currentValueSubject-java.lang.String-T-">currentValueSubject(String, T)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="spritz/Scheduler.html#currentVpu--">currentVpu()</a></span> - Static method in class spritz.<a href="spritz/Scheduler.html" title="class in spritz">Scheduler</a></dt>
 <dd>
 <div class="block">Return the current VPU.</div>
@@ -260,6 +274,8 @@
 <dd>
 <div class="block">Set `spritz.enable_uncaught_error_handlers` setting to false.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="spritz/ConnectableStream.html#disconnect--">disconnect()</a></span> - Method in class spritz.<a href="spritz/ConnectableStream.html" title="class in spritz">ConnectableStream</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#distinct--">distinct()</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
 <div class="block">Filter the items if they have been previously emitted.</div>
@@ -268,11 +284,6 @@
 <dd>
 <div class="block">Filter the items if they have been previously emitted.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="spritz/MulticastSubject.html#doComplete--">doComplete()</a></span> - Method in class spritz.<a href="spritz/MulticastSubject.html" title="class in spritz">MulticastSubject</a></dt>
-<dt><span class="memberNameLink"><a href="spritz/MulticastSubject.html#doError-java.lang.Throwable-">doError(Throwable)</a></span> - Method in class spritz.<a href="spritz/MulticastSubject.html" title="class in spritz">MulticastSubject</a></dt>
-<dt><span class="memberNameLink"><a href="spritz/MulticastSubject.html#doNext-T-">doNext(T)</a></span> - Method in class spritz.<a href="spritz/MulticastSubject.html" title="class in spritz">MulticastSubject</a></dt>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#doSubscribe-spritz.Subscriber-">doSubscribe(Subscriber&lt;? super T&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>&nbsp;</dd>
 </dl>
 <a name="I:E">
 <!--   -->
@@ -300,7 +311,13 @@
 <div class="block">Emit the specified item after emitting items from this stream.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="spritz/EventEmitter.html#error-java.lang.Throwable-">error(Throwable)</a></span> - Method in interface spritz.<a href="spritz/EventEmitter.html" title="interface in spritz">EventEmitter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Emit an error signal.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Subject.html#error-java.lang.Throwable-">error(Throwable)</a></span> - Method in class spritz.<a href="spritz/Subject.html" title="class in spritz">Subject</a></dt>
+<dd>
+<div class="block">Emit an error signal.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#errorIfEmpty-java.util.function.Supplier-">errorIfEmpty(Supplier&lt;Throwable&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
 <div class="block">Emit an error if the stream completes and no items were emitted.</div>
@@ -310,7 +327,9 @@
 <div class="block">Emit an error if the stream completes and no items were emitted.</div>
 </dd>
 <dt><a href="spritz/EventEmitter.html" title="interface in spritz"><span class="typeNameLink">EventEmitter</span></a>&lt;<a href="spritz/EventEmitter.html" title="type parameter in EventEmitter">T</a>&gt; - Interface in <a href="spritz/package-summary.html">spritz</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Interface for elements that can emit events.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#exhaustMap-java.util.function.Function-">exhaustMap(Function&lt;T, Stream&lt;DownstreamT&gt;&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
 <div class="block">Map each input item to a stream and emit the items from the most recently
@@ -422,10 +441,6 @@
 <dd>
 <div class="block">Return the timeout associated with this item.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="spritz/MulticastSubject.html#getUpstream--">getUpstream()</a></span> - Method in class spritz.<a href="spritz/MulticastSubject.html" title="class in spritz">MulticastSubject</a></dt>
-<dd>
-<div class="block">Return the upstream stream.</div>
-</dd>
 </dl>
 <a name="I:I">
 <!--   -->
@@ -440,8 +455,14 @@
 <dd>
 <div class="block">Drop all items from this stream, only emitting the completion or failed signal.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="spritz/SourceCreator.Observer.html#isCancelled--">isCancelled()</a></span> - Method in interface spritz.<a href="spritz/SourceCreator.Observer.html" title="interface in spritz">SourceCreator.Observer</a></dt>
-<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="spritz/EventEmitter.html#isDone--">isDone()</a></span> - Method in interface spritz.<a href="spritz/EventEmitter.html" title="interface in spritz">EventEmitter</a></dt>
+<dd>
+<div class="block">Return true if the emitter has emitted an error signal, a complete signal or has been cancelled.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Subject.html#isDone--">isDone()</a></span> - Method in class spritz.<a href="spritz/Subject.html" title="class in spritz">Subject</a></dt>
+<dd>
+<div class="block">Return true if the emitter has emitted an error signal, a complete signal or has been cancelled.</div>
+</dd>
 </dl>
 <a name="I:L">
 <!--   -->
@@ -519,6 +540,10 @@
 <dd>
 <div class="block">Map each input item to a stream and flatten the items emitted by the inner stream into this stream.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#mergeWith-spritz.Stream...-">mergeWith(Stream&lt;T&gt;...)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Concurrently merge items from the specified streams into the current stream.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="spritz/Scheduler.html#microTask-java.lang.Runnable-">microTask(Runnable)</a></span> - Static method in class spritz.<a href="spritz/Scheduler.html" title="class in spritz">Scheduler</a></dt>
 <dd>
 <div class="block">Queue the task to execute in the next "micro" task.</div>
@@ -526,15 +551,6 @@
 <dt><span class="memberNameLink"><a href="spritz/Scheduler.html#microTaskVpu--">microTaskVpu()</a></span> - Static method in class spritz.<a href="spritz/Scheduler.html" title="class in spritz">Scheduler</a></dt>
 <dd>
 <div class="block">Return the "micro" task VPU.</div>
-</dd>
-<dt><a href="spritz/MulticastSubject.html" title="class in spritz"><span class="typeNameLink">MulticastSubject</span></a>&lt;<a href="spritz/MulticastSubject.html" title="type parameter in MulticastSubject">T</a>&gt; - Class in <a href="spritz/package-summary.html">spritz</a></dt>
-<dd>
-<div class="block">A PublishOperator that emits items to currently subscribed <a href="spritz/Subscriber.html" title="interface in spritz"><code>Subscriber</code></a> instances and terminal
- events to current or late <a href="spritz/Subscriber.html" title="interface in spritz"><code>Subscriber</code></a> instances.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/MulticastSubject.html#MulticastSubject-spritz.Publisher-">MulticastSubject(Publisher&lt;T&gt;)</a></span> - Constructor for class spritz.<a href="spritz/MulticastSubject.html" title="class in spritz">MulticastSubject</a></dt>
-<dd>
-<div class="block">Create a stream with specified upstream.</div>
 </dd>
 </dl>
 <a name="I:N">
@@ -551,7 +567,13 @@
 <div class="block">Creates a stream that emits no items, never completes and never fails.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="spritz/EventEmitter.html#next-T-">next(T)</a></span> - Method in interface spritz.<a href="spritz/EventEmitter.html" title="interface in spritz">EventEmitter</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Emit a data item.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Subject.html#next-T-">next(T)</a></span> - Method in class spritz.<a href="spritz/Subject.html" title="class in spritz">Subject</a></dt>
+<dd>
+<div class="block">Emit a data item.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="spritz/SpritzTestUtil.html#noPurgeTasksWhenRunawayDetected--">noPurgeTasksWhenRunawayDetected()</a></span> - Static method in class spritz.<a href="spritz/SpritzTestUtil.html" title="class in spritz">SpritzTestUtil</a></dt>
 <dd>
 <div class="block">Set `spritz.purge_tasks_when_runaway_detected` setting to false.</div>
@@ -598,58 +620,10 @@
 <dd>
 <div class="block">Remove items in the stream that are not instances of the specified <code>type</code> and return a stream of the specified type.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onCancel-java.lang.Runnable-">onCancel(Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before the stream is canceled by a downstream stage.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onCancel-java.lang.String-java.lang.Runnable-">onCancel(String, Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before the stream is canceled by a downstream stage.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onComplete-java.lang.Runnable-">onComplete(Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before signalling complete.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onComplete-java.lang.String-java.lang.Runnable-">onComplete(String, Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before signalling complete.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="spritz/Subscriber.html#onComplete--">onComplete()</a></span> - Method in interface spritz.<a href="spritz/Subscriber.html" title="interface in spritz">Subscriber</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onError-java.util.function.Consumer-">onError(Consumer&lt;Throwable&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before signalling error.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onError-java.lang.String-java.util.function.Consumer-">onError(String, Consumer&lt;Throwable&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before signalling error.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="spritz/Subscriber.html#onError-java.lang.Throwable-">onError(Throwable)</a></span> - Method in interface spritz.<a href="spritz/Subscriber.html" title="interface in spritz">Subscriber</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onErrorResumeWith-java.util.function.Function-">onErrorResumeWith(Function&lt;Throwable, Stream&lt;T&gt;&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">When an upstream emits an error then replace upstream with the stream returned by the supplied function rather
- than emitting an error to downstream.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onErrorResumeWith-java.lang.String-java.util.function.Function-">onErrorResumeWith(String, Function&lt;Throwable, Stream&lt;T&gt;&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">When an upstream emits an error then replace upstream with the stream returned by the supplied function rather
- than emitting an error to downstream.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onErrorReturn-T-">onErrorReturn(T)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">When an upstream emits an error then emit supplied value and complete the stream.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onErrorReturn-java.lang.String-T-">onErrorReturn(String, T)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">When an upstream emits an error then emit supplied value and complete the stream.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="spritz/Scheduler.html#onIdle-java.lang.Runnable-">onIdle(Runnable)</a></span> - Static method in class spritz.<a href="spritz/Scheduler.html" title="class in spritz">Scheduler</a></dt>
 <dd>
 <div class="block">Queue the task to execute when the browser is idle.</div>
@@ -658,40 +632,10 @@
 <dd>
 <div class="block">Return the "onIdle" VPU.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onNext-java.util.function.Consumer-">onNext(Consumer&lt;? super T&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before each item is emitted.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onNext-java.lang.String-java.util.function.Consumer-">onNext(String, Consumer&lt;? super T&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before each item is emitted.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="spritz/Subscriber.html#onNext-T-">onNext(T)</a></span> - Method in interface spritz.<a href="spritz/Subscriber.html" title="interface in spritz">Subscriber</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onSubscribe-java.util.function.Consumer-">onSubscribe(Consumer&lt;Subscription&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before signalling subscription.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onSubscribe-java.lang.String-java.util.function.Consumer-">onSubscribe(String, Consumer&lt;Subscription&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before signalling subscription.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="spritz/Subscriber.html#onSubscribe-spritz.Subscription-">onSubscribe(Subscription)</a></span> - Method in interface spritz.<a href="spritz/Subscriber.html" title="interface in spritz">Subscriber</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onTerminate-java.lang.Runnable-">onTerminate(Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before signalling complete or signalling error.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#onTerminate-java.lang.String-java.lang.Runnable-">onTerminate(String, Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before signalling complete or signalling error.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="spritz/UncaughtErrorHandler.html#onUncaughtError-java.lang.Throwable-">onUncaughtError(Throwable)</a></span> - Method in interface spritz.<a href="spritz/UncaughtErrorHandler.html" title="interface in spritz">UncaughtErrorHandler</a></dt>
 <dd>
 <div class="block">Callback invoked when an unexpected error occurs.</div>
@@ -712,6 +656,56 @@
 <div class="block">Return a stream containing all the items from this stream that invokes the action
  parameter before each item is emitted.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#peekCancel-java.lang.Runnable-">peekCancel(Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Return a stream containing all the items from this stream that invokes the action
+ parameter before the stream is canceled by a downstream stage.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#peekCancel-java.lang.String-java.lang.Runnable-">peekCancel(String, Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Return a stream containing all the items from this stream that invokes the action
+ parameter before the stream is canceled by a downstream stage.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#peekComplete-java.lang.Runnable-">peekComplete(Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Return a stream containing all the items from this stream that invokes the action
+ parameter before signalling complete.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#peekComplete-java.lang.String-java.lang.Runnable-">peekComplete(String, Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Return a stream containing all the items from this stream that invokes the action
+ parameter before signalling complete.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#peekError-java.util.function.Consumer-">peekError(Consumer&lt;Throwable&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Return a stream containing all the items from this stream that invokes the action
+ parameter before signalling error.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#peekError-java.lang.String-java.util.function.Consumer-">peekError(String, Consumer&lt;Throwable&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Return a stream containing all the items from this stream that invokes the action
+ parameter before signalling error.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#peekSubscribe-java.util.function.Consumer-">peekSubscribe(Consumer&lt;Subscription&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Return a stream containing all the items from this stream that invokes the action
+ parameter before signalling subscription.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#peekSubscribe-java.lang.String-java.util.function.Consumer-">peekSubscribe(String, Consumer&lt;Subscription&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Return a stream containing all the items from this stream that invokes the action
+ parameter before signalling subscription.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#peekTerminate-java.lang.Runnable-">peekTerminate(Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Return a stream containing all the items from this stream that invokes the action
+ parameter before signalling complete or signalling error.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#peekTerminate-java.lang.String-java.lang.Runnable-">peekTerminate(String, Runnable)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Return a stream containing all the items from this stream that invokes the action
+ parameter before signalling complete or signalling error.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#periodic-int-">periodic(int)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
 <div class="block">Create a stream that emits sequential numbers every specified interval of time.</div>
@@ -726,15 +720,39 @@
 </dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#publish--">publish()</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
-<div class="block">Publish emitted items and signals to the specified subject.</div>
+<div class="block">Create a multicast, <a href="spritz/ConnectableStream.html" title="class in spritz"><code>ConnectableStream</code></a> that shares a single subscription to this stream.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#publish-java.lang.String-">publish(String)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
-<div class="block">Publish emitted items and signals to the specified subject.</div>
+<div class="block">Create a multicast, <a href="spritz/ConnectableStream.html" title="class in spritz"><code>ConnectableStream</code></a> that shares a single subscription to this stream.</div>
 </dd>
-<dt><a href="spritz/Publisher.html" title="interface in spritz"><span class="typeNameLink">Publisher</span></a>&lt;<a href="spritz/Publisher.html" title="type parameter in Publisher">T</a>&gt; - Interface in <a href="spritz/package-summary.html">spritz</a></dt>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#publishCurrentValue-T-">publishCurrentValue(T)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
-<div class="block">A subscriber can subscribe to receive events from a publisher.</div>
+<div class="block">Create a multicast, <a href="spritz/ConnectableStream.html" title="class in spritz"><code>ConnectableStream</code></a> that shares a single subscription to this stream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#publishCurrentValue-java.lang.String-T-">publishCurrentValue(String, T)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Create a multicast, <a href="spritz/ConnectableStream.html" title="class in spritz"><code>ConnectableStream</code></a> that shares a single subscription to this stream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#publishReplay--">publishReplay()</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Create a multicast, <a href="spritz/ConnectableStream.html" title="class in spritz"><code>ConnectableStream</code></a> that shares a single subscription to this stream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#publishReplay-int-int-">publishReplay(int, int)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Create a multicast, <a href="spritz/ConnectableStream.html" title="class in spritz"><code>ConnectableStream</code></a> that shares a single subscription to this stream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#publishReplay-java.lang.String-int-int-">publishReplay(String, int, int)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Create a multicast, <a href="spritz/ConnectableStream.html" title="class in spritz"><code>ConnectableStream</code></a> that shares a single subscription to this stream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#publishReplayWithMaxAge-int-">publishReplayWithMaxAge(int)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Create a multicast, <a href="spritz/ConnectableStream.html" title="class in spritz"><code>ConnectableStream</code></a> that shares a single subscription to this stream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#publishReplayWithMaxSize-int-">publishReplayWithMaxSize(int)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Create a multicast, <a href="spritz/ConnectableStream.html" title="class in spritz"><code>ConnectableStream</code></a> that shares a single subscription to this stream.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="spritz/Spritz.html#purgeTasksWhenRunawayDetected--">purgeTasksWhenRunawayDetected()</a></span> - Static method in class spritz.<a href="spritz/Spritz.html" title="class in spritz">Spritz</a></dt>
 <dd>
@@ -758,6 +776,14 @@
 <dd>
 <div class="block">Create a stream that emits a sequence of numbers within a specified range.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="spritz/ConnectableStream.html#refCount--">refCount()</a></span> - Method in class spritz.<a href="spritz/ConnectableStream.html" title="class in spritz">ConnectableStream</a></dt>
+<dd>
+<div class="block">a stream that ensures that as long as there is at least one subscriber to this stream, then this stream will be subscribed to upstream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/ConnectableStream.html#refCount-java.lang.String-">refCount(String)</a></span> - Method in class spritz.<a href="spritz/ConnectableStream.html" title="class in spritz">ConnectableStream</a></dt>
+<dd>
+<div class="block">Return a stream that ensures that as long as there is at least one subscriber to this stream, then this stream will be subscribed to upstream.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="spritz/Spritz.html#removeUncaughtErrorHandler-spritz.UncaughtErrorHandler-">removeUncaughtErrorHandler(UncaughtErrorHandler)</a></span> - Static method in class spritz.<a href="spritz/Spritz.html" title="class in spritz">Spritz</a></dt>
 <dd>
 <div class="block">Remove error handler from list of existing error handlers.</div>
@@ -774,9 +800,43 @@
 <dd>
 <div class="block">When an upstream emits an error then re-subscribe to upstream rather than emitting an error to downstream.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#replaySubject-int-int-">replaySubject(int, int)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#replaySubject-java.lang.String-int-int-">replaySubject(String, int, int)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#replaySubject--">replaySubject()</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#replaySubject-java.lang.String-">replaySubject(String)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#replaySubjectWithMaxAge-int-">replaySubjectWithMaxAge(int)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#replaySubjectWithMaxAge-java.lang.String-int-">replaySubjectWithMaxAge(String, int)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#replaySubjectWithMaxSize-int-">replaySubjectWithMaxSize(int)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#replaySubjectWithMaxSize-java.lang.String-int-">replaySubjectWithMaxSize(String, int)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="spritz/Spritz.html#reportUncaughtError-java.lang.Throwable-">reportUncaughtError(Throwable)</a></span> - Static method in class spritz.<a href="spritz/Spritz.html" title="class in spritz">Spritz</a></dt>
 <dd>
 <div class="block">Report an uncaught error in stream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#rescue-java.util.function.Function-">rescue(Function&lt;Throwable, Stream&lt;T&gt;&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">When an upstream emits an error then replace upstream with the stream returned by the supplied function rather
+ than emitting an error to downstream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#rescue-java.lang.String-java.util.function.Function-">rescue(String, Function&lt;Throwable, Stream&lt;T&gt;&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">When an upstream emits an error then replace upstream with the stream returned by the supplied function rather
+ than emitting an error to downstream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#rescueThenReturn-T-">rescueThenReturn(T)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">When an upstream emits an error then emit supplied value and complete the stream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#rescueThenReturn-java.lang.String-T-">rescueThenReturn(String, T)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">When an upstream emits an error then emit supplied value and complete the stream.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="spritz/SpritzTestUtil.html#resetConfig-boolean-">resetConfig(boolean)</a></span> - Static method in class spritz.<a href="spritz/SpritzTestUtil.html" title="class in spritz">SpritzTestUtil</a></dt>
 <dd>
@@ -828,6 +888,14 @@
 <dd>
 <div class="block">Specify logger to use to capture logging in tests</div>
 </dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#share--">share()</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Create a stream that multicasts the source Stream.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#share-java.lang.String-">share(String)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dd>
+<div class="block">Create a stream that multicasts the source Stream.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="spritz/Spritz.html#shouldCheckApiInvariants--">shouldCheckApiInvariants()</a></span> - Static method in class spritz.<a href="spritz/Spritz.html" title="class in spritz">Spritz</a></dt>
 <dd>
 <div class="block">Return true if apiInvariants will be checked.</div>
@@ -874,8 +942,6 @@
 </dd>
 <dt><a href="spritz/SourceCreator.html" title="interface in spritz"><span class="typeNameLink">SourceCreator</span></a>&lt;<a href="spritz/SourceCreator.html" title="type parameter in SourceCreator">T</a>&gt; - Interface in <a href="spritz/package-summary.html">spritz</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="spritz/SourceCreator.Observer.html" title="interface in spritz"><span class="typeNameLink">SourceCreator.Observer</span></a>&lt;<a href="spritz/SourceCreator.Observer.html" title="type parameter in SourceCreator.Observer">T</a>&gt; - Interface in <a href="spritz/package-summary.html">spritz</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="spritz/package-summary.html">spritz</a> - package spritz</dt>
 <dd>
 <div class="block">The core elements of the Spritz library.</div>
@@ -898,21 +964,15 @@
 </dd>
 <dt><a href="spritz/Stream.html" title="class in spritz"><span class="typeNameLink">Stream</span></a>&lt;<a href="spritz/Stream.html" title="type parameter in Stream">T</a>&gt; - Class in <a href="spritz/package-summary.html">spritz</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#Stream-java.lang.String-">Stream(String)</a></span> - Constructor for class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#subject--">subject()</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="spritz/Subject.html" title="interface in spritz"><span class="typeNameLink">Subject</span></a>&lt;<a href="spritz/Subject.html" title="type parameter in Subject">T</a>&gt; - Interface in <a href="spritz/package-summary.html">spritz</a></dt>
+<dt><span class="memberNameLink"><a href="spritz/Stream.html#subject-java.lang.String-">subject(String)</a></span> - Static method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="spritz/MulticastSubject.html#subscribe-spritz.Subscriber-">subscribe(Subscriber&lt;? super T&gt;)</a></span> - Method in class spritz.<a href="spritz/MulticastSubject.html" title="class in spritz">MulticastSubject</a></dt>
-<dd>
-<div class="block">Subscribe the subscriber to this publisher so that it can receive events.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Publisher.html#subscribe-spritz.Subscriber-">subscribe(Subscriber&lt;? super T&gt;)</a></span> - Method in interface spritz.<a href="spritz/Publisher.html" title="interface in spritz">Publisher</a></dt>
-<dd>
-<div class="block">Subscribe the subscriber to this publisher so that it can receive events.</div>
-</dd>
+<dt><a href="spritz/Subject.html" title="class in spritz"><span class="typeNameLink">Subject</span></a>&lt;<a href="spritz/Subject.html" title="type parameter in Subject">T</a>&gt; - Class in <a href="spritz/package-summary.html">spritz</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#subscribe-spritz.Subscriber-">subscribe(Subscriber&lt;? super T&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
-<div class="block">Subscribe the subscriber to this publisher so that it can receive events.</div>
+<div class="block">Subscribe the subscriber to this stream so that it can receive events.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#subscribeOn-spritz.VirtualProcessorUnit-">subscribeOn(VirtualProcessorUnit)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
@@ -964,16 +1024,6 @@
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#takeWhile-java.lang.String-java.util.function.Predicate-">takeWhile(String, Predicate&lt;? super T&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>
 <div class="block">Return items from this stream until an item fails to match the supplied <code>predicate</code>.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#tap-java.util.function.Consumer-">tap(Consumer&lt;? super T&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before each item is emitted.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="spritz/Stream.html#tap-java.lang.String-java.util.function.Consumer-">tap(String, Consumer&lt;? super T&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
-<dd>
-<div class="block">Return a stream containing all the items from this stream that invokes the action
- parameter before each item is emitted.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="spritz/Stream.html#terminate-java.util.function.Supplier-">terminate(Supplier&lt;Subscriber&lt;T&gt;&gt;)</a></span> - Method in class spritz.<a href="spritz/Stream.html" title="class in spritz">Stream</a></dt>
 <dd>&nbsp;</dd>
@@ -1051,7 +1101,7 @@
 <li><a href="overview-summary.html">Overview</a></li>
 <li><a href="spritz/package-summary.html">Package</a></li>
 <li>Class</li>
-<li><a href="spritz/package-tree.html">Tree</a></li>
+<li><a href="overview-tree.html">Tree</a></li>
 <li><a href="deprecated-list.html">Deprecated</a></li>
 <li class="navBarCell1Rev">Index</li>
 <li><a href="help-doc.html">Help</a></li>

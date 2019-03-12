@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":18,"i4":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -37,7 +37,7 @@ var activeTableTab = "activeTableTab";
 </a>
 <ul class="navList" title="Navigation">
 <li><a href="../overview-summary.html">Overview</a></li>
-<li><a href="../spritz/package-summary.html">Package</a></li>
+<li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
 <li><a href="../deprecated-list.html">Deprecated</a></li>
@@ -48,7 +48,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../spritz/ConnectableStream.html" title="class in spritz"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../spritz/Scheduler.html" title="class in spritz"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../spritz/Hub.html" title="class in spritz"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../index.html?spritz/EventEmitter.html" target="_top">Frames</a></li>
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../spritz/Subject.html" title="class in spritz">Subject</a></dd>
+<dd><a href="../spritz/Hub.html" title="class in spritz">Hub</a>, <a href="../spritz/Subject.html" title="class in spritz">Subject</a>, <a href="../spritz/WebSocketHub.html" title="class in spritz">WebSocketHub</a></dd>
 </dl>
 <hr>
 <br>
@@ -118,7 +118,7 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -142,6 +142,12 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/EventEmitter.html#isNotDone--">isNotDone</a></span>()</code>
+<div class="block">Return true if <a href="../spritz/EventEmitter.html#isDone--"><code>isDone()</code></a> returns <code>false</code>.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../spritz/EventEmitter.html#next-T-">next</a></span>(<a href="../spritz/EventEmitter.html" title="type parameter in EventEmitter">T</a>&nbsp;item)</code>
 <div class="block">Emit a data item.</div>
@@ -208,7 +214,7 @@ var activeTableTab = "activeTableTab";
 <a name="isDone--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>isDone</h4>
 <pre>boolean&nbsp;<a href="../src-html/spritz/EventEmitter.html#line.37">isDone</a>()</pre>
@@ -216,6 +222,20 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if the emitter has emitted an error signal, a complete signal or has been cancelled.</dd>
+</dl>
+</li>
+</ul>
+<a name="isNotDone--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isNotDone</h4>
+<pre>default&nbsp;boolean&nbsp;<a href="../src-html/spritz/EventEmitter.html#line.44">isNotDone</a>()</pre>
+<div class="block">Return true if <a href="../spritz/EventEmitter.html#isDone--"><code>isDone()</code></a> returns <code>false</code>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if <a href="../spritz/EventEmitter.html#isDone--"><code>isDone()</code></a> returns <code>false</code>.</dd>
 </dl>
 </li>
 </ul>
@@ -236,7 +256,7 @@ var activeTableTab = "activeTableTab";
 </a>
 <ul class="navList" title="Navigation">
 <li><a href="../overview-summary.html">Overview</a></li>
-<li><a href="../spritz/package-summary.html">Package</a></li>
+<li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
 <li><a href="../deprecated-list.html">Deprecated</a></li>
@@ -247,7 +267,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../spritz/ConnectableStream.html" title="class in spritz"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../spritz/Scheduler.html" title="class in spritz"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../spritz/Hub.html" title="class in spritz"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../index.html?spritz/EventEmitter.html" target="_top">Frames</a></li>

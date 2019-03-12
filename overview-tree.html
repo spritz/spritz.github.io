@@ -31,7 +31,7 @@
 </a>
 <ul class="navList" title="Navigation">
 <li><a href="overview-summary.html">Overview</a></li>
-<li><a href="spritz/package-summary.html">Package</a></li>
+<li>Package</li>
 <li>Class</li>
 <li class="navBarCell1Rev">Tree</li>
 <li><a href="deprecated-list.html">Deprecated</a></li>
@@ -71,7 +71,9 @@
 <h1 class="title">Hierarchy For All Packages</h1>
 <span class="packageHierarchyLabel">Package Hierarchies:</span>
 <ul class="horizontal">
-<li><a href="spritz/package-tree.html">spritz</a></li>
+<li><a href="spritz/package-tree.html">spritz</a>, </li>
+<li><a href="spritz/dom/package-tree.html">spritz.dom</a>, </li>
+<li><a href="spritz/dom/util/package-tree.html">spritz.dom.util</a></li>
 </ul>
 </div>
 <div class="contentContainer">
@@ -79,25 +81,56 @@
 <ul>
 <li type="circle">java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang"><span class="typeNameLink">Object</span></a>
 <ul>
+<li type="circle">elemental2.dom.Event
+<ul>
+<li type="circle">spritz.dom.util.<a href="spritz/dom/util/CloseEvent.html" title="class in spritz.dom.util"><span class="typeNameLink">CloseEvent</span></a></li>
+</ul>
+</li>
 <li type="circle">spritz.<a href="spritz/Scheduler.html" title="class in spritz"><span class="typeNameLink">Scheduler</span></a></li>
 <li type="circle">spritz.<a href="spritz/Spritz.html" title="class in spritz"><span class="typeNameLink">Spritz</span></a></li>
 <li type="circle">spritz.<a href="spritz/SpritzTestUtil.html" title="class in spritz"><span class="typeNameLink">SpritzTestUtil</span></a></li>
 <li type="circle">spritz.<a href="spritz/Stream.html" title="class in spritz"><span class="typeNameLink">Stream</span></a>&lt;T&gt;
 <ul>
 <li type="circle">spritz.<a href="spritz/ConnectableStream.html" title="class in spritz"><span class="typeNameLink">ConnectableStream</span></a>&lt;T&gt;</li>
-<li type="circle">spritz.<a href="spritz/Subject.html" title="class in spritz"><span class="typeNameLink">Subject</span></a>&lt;T&gt; (implements spritz.<a href="spritz/EventEmitter.html" title="interface in spritz">EventEmitter</a>&lt;T&gt;)</li>
+<li type="circle">spritz.<a href="spritz/Hub.html" title="class in spritz"><span class="typeNameLink">Hub</span></a>&lt;MessageInT,MessageOutT&gt; (implements spritz.<a href="spritz/EventEmitter.html" title="interface in spritz">EventEmitter</a>&lt;T&gt;)
+<ul>
+<li type="circle">spritz.<a href="spritz/Subject.html" title="class in spritz"><span class="typeNameLink">Subject</span></a>&lt;T&gt;</li>
+<li type="circle">spritz.<a href="spritz/WebSocketHub.html" title="class in spritz"><span class="typeNameLink">WebSocketHub</span></a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li type="circle">spritz.<a href="spritz/Subscription.html" title="class in spritz"><span class="typeNameLink">Subscription</span></a></li>
 <li type="circle">java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang"><span class="typeNameLink">Throwable</span></a> (implements java.io.<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>)
 <ul>
 <li type="circle">java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang"><span class="typeNameLink">Exception</span></a>
 <ul>
 <li type="circle">spritz.<a href="spritz/TimeoutException.html" title="class in spritz"><span class="typeNameLink">TimeoutException</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketCloseException.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketCloseException</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketErrorException.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketErrorException</span></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li type="circle">spritz.<a href="spritz/VirtualProcessorUnit.html" title="class in spritz"><span class="typeNameLink">VirtualProcessorUnit</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketConfig.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketConfig</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketRequest.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketRequest</span></a>
+<ul>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketCloseRequest.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketCloseRequest</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketMessageRequest.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketMessageRequest</span></a></li>
+</ul>
+</li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketResponse.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketResponse</span></a>
+<ul>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketArrayBufferMessage.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketArrayBufferMessage</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketBlobMessage.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketBlobMessage</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketCloseCompleted.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketCloseCompleted</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketCloseStarting.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketCloseStarting</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketFailed.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketFailed</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketOpenCompleted.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketOpenCompleted</span></a></li>
+<li type="circle">spritz.dom.<a href="spritz/dom/WebSocketStringMessage.html" title="class in spritz.dom"><span class="typeNameLink">WebSocketStringMessage</span></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -106,10 +139,16 @@
 <li type="circle">spritz.<a href="spritz/AccumulatorFunction.html" title="interface in spritz"><span class="typeNameLink">AccumulatorFunction</span></a>&lt;Input,Output&gt;</li>
 <li type="circle">spritz.<a href="spritz/Cancelable.html" title="interface in spritz"><span class="typeNameLink">Cancelable</span></a></li>
 <li type="circle">spritz.<a href="spritz/EventEmitter.html" title="interface in spritz"><span class="typeNameLink">EventEmitter</span></a>&lt;T&gt;</li>
+<li type="circle">elemental2.dom.EventInit
+<ul>
+<li type="circle">spritz.dom.util.<a href="spritz/dom/util/CloseEventInit.html" title="interface in spritz.dom.util"><span class="typeNameLink">CloseEventInit</span></a></li>
+</ul>
+</li>
+<li type="circle">spritz.dom.util.<a href="spritz/dom/util/EventMessageEventTypeParameterUnionType.html" title="interface in spritz.dom.util"><span class="typeNameLink">EventMessageEventTypeParameterUnionType</span></a></li>
+<li type="circle">spritz.dom.util.<a href="spritz/dom/util/OnerrorFn.html" title="interface in spritz.dom.util"><span class="typeNameLink">OnerrorFn</span></a></li>
 <li type="circle">spritz.<a href="spritz/SourceCreator.html" title="interface in spritz"><span class="typeNameLink">SourceCreator</span></a>&lt;T&gt;</li>
 <li type="circle">spritz.<a href="spritz/SpritzTestUtil.Logger.html" title="interface in spritz"><span class="typeNameLink">SpritzTestUtil.Logger</span></a></li>
 <li type="circle">spritz.<a href="spritz/Subscriber.html" title="interface in spritz"><span class="typeNameLink">Subscriber</span></a>&lt;T&gt;</li>
-<li type="circle">spritz.<a href="spritz/Subscription.html" title="interface in spritz"><span class="typeNameLink">Subscription</span></a></li>
 <li type="circle">spritz.<a href="spritz/SuccessivePredicate.html" title="interface in spritz"><span class="typeNameLink">SuccessivePredicate</span></a>&lt;T&gt;</li>
 <li type="circle">spritz.<a href="spritz/TimeoutForItemFn.html" title="interface in spritz"><span class="typeNameLink">TimeoutForItemFn</span></a>&lt;T&gt;</li>
 <li type="circle">spritz.<a href="spritz/UncaughtErrorHandler.html" title="interface in spritz"><span class="typeNameLink">UncaughtErrorHandler</span></a></li>
@@ -125,7 +164,7 @@
 </a>
 <ul class="navList" title="Navigation">
 <li><a href="overview-summary.html">Overview</a></li>
-<li><a href="spritz/package-summary.html">Package</a></li>
+<li>Package</li>
 <li>Class</li>
 <li class="navBarCell1Rev">Tree</li>
 <li><a href="deprecated-list.html">Deprecated</a></li>

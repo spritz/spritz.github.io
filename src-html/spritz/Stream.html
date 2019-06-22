@@ -2613,58 +2613,55 @@
 <span class="sourceLineNo">2605</span>    return getName();<a name="line.2605"></a>
 <span class="sourceLineNo">2606</span>  }<a name="line.2606"></a>
 <span class="sourceLineNo">2607</span><a name="line.2607"></a>
-<span class="sourceLineNo">2608</span>  /**<a name="line.2608"></a>
-<span class="sourceLineNo">2609</span>   * {@inheritDoc}<a name="line.2609"></a>
-<span class="sourceLineNo">2610</span>   */<a name="line.2610"></a>
-<span class="sourceLineNo">2611</span>  @Nonnull<a name="line.2611"></a>
-<span class="sourceLineNo">2612</span>  @Override<a name="line.2612"></a>
-<span class="sourceLineNo">2613</span>  public final String toString()<a name="line.2613"></a>
-<span class="sourceLineNo">2614</span>  {<a name="line.2614"></a>
-<span class="sourceLineNo">2615</span>    if ( Spritz.areNamesEnabled() )<a name="line.2615"></a>
-<span class="sourceLineNo">2616</span>    {<a name="line.2616"></a>
-<span class="sourceLineNo">2617</span>      return getQualifiedName();<a name="line.2617"></a>
-<span class="sourceLineNo">2618</span>    }<a name="line.2618"></a>
-<span class="sourceLineNo">2619</span>    else<a name="line.2619"></a>
-<span class="sourceLineNo">2620</span>    {<a name="line.2620"></a>
-<span class="sourceLineNo">2621</span>      return super.toString();<a name="line.2621"></a>
-<span class="sourceLineNo">2622</span>    }<a name="line.2622"></a>
-<span class="sourceLineNo">2623</span>  }<a name="line.2623"></a>
-<span class="sourceLineNo">2624</span><a name="line.2624"></a>
-<span class="sourceLineNo">2625</span>  /**<a name="line.2625"></a>
-<span class="sourceLineNo">2626</span>   * Build name for Stream.<a name="line.2626"></a>
-<span class="sourceLineNo">2627</span>   * If {@link Spritz#areNamesEnabled()} returns false then this method will return null, otherwise the specified<a name="line.2627"></a>
-<span class="sourceLineNo">2628</span>   * name will be returned or a name synthesized from the prefix if no name is<a name="line.2628"></a>
-<span class="sourceLineNo">2629</span>   * specified.<a name="line.2629"></a>
-<span class="sourceLineNo">2630</span>   *<a name="line.2630"></a>
-<span class="sourceLineNo">2631</span>   * @param name   the name specified by the user.<a name="line.2631"></a>
-<span class="sourceLineNo">2632</span>   * @param prefix the prefix used if this method needs to generate name.<a name="line.2632"></a>
-<span class="sourceLineNo">2633</span>   * @return the name.<a name="line.2633"></a>
-<span class="sourceLineNo">2634</span>   */<a name="line.2634"></a>
-<span class="sourceLineNo">2635</span>  @Nullable<a name="line.2635"></a>
-<span class="sourceLineNo">2636</span>  static String generateName( @Nullable final String name, @Nonnull final String prefix )<a name="line.2636"></a>
-<span class="sourceLineNo">2637</span>  {<a name="line.2637"></a>
-<span class="sourceLineNo">2638</span>    return generateName( name, prefix, null );<a name="line.2638"></a>
-<span class="sourceLineNo">2639</span>  }<a name="line.2639"></a>
-<span class="sourceLineNo">2640</span><a name="line.2640"></a>
-<span class="sourceLineNo">2641</span>  /**<a name="line.2641"></a>
-<span class="sourceLineNo">2642</span>   * Build name for Stream.<a name="line.2642"></a>
-<span class="sourceLineNo">2643</span>   * If {@link Spritz#areNamesEnabled()} returns false then this method will return null, otherwise the specified<a name="line.2643"></a>
-<span class="sourceLineNo">2644</span>   * name will be returned or a name synthesized from the prefix and params if no name is<a name="line.2644"></a>
-<span class="sourceLineNo">2645</span>   * specified.<a name="line.2645"></a>
-<span class="sourceLineNo">2646</span>   *<a name="line.2646"></a>
-<span class="sourceLineNo">2647</span>   * @param name   the name specified by the user.<a name="line.2647"></a>
-<span class="sourceLineNo">2648</span>   * @param prefix the prefix used if this method needs to generate name.<a name="line.2648"></a>
-<span class="sourceLineNo">2649</span>   * @param params a description of parameters used constructing the stream if any.<a name="line.2649"></a>
-<span class="sourceLineNo">2650</span>   * @return the name.<a name="line.2650"></a>
-<span class="sourceLineNo">2651</span>   */<a name="line.2651"></a>
-<span class="sourceLineNo">2652</span>  @Nullable<a name="line.2652"></a>
-<span class="sourceLineNo">2653</span>  static String generateName( @Nullable final String name, @Nonnull final String prefix, @Nullable final String params )<a name="line.2653"></a>
-<span class="sourceLineNo">2654</span>  {<a name="line.2654"></a>
-<span class="sourceLineNo">2655</span>    return Spritz.areNamesEnabled() ?<a name="line.2655"></a>
-<span class="sourceLineNo">2656</span>           null != name ? name : prefix + "(" + ( null == params ? "" : params ) + ")" :<a name="line.2656"></a>
-<span class="sourceLineNo">2657</span>           null;<a name="line.2657"></a>
-<span class="sourceLineNo">2658</span>  }<a name="line.2658"></a>
-<span class="sourceLineNo">2659</span>}<a name="line.2659"></a>
+<span class="sourceLineNo">2608</span>  @Nonnull<a name="line.2608"></a>
+<span class="sourceLineNo">2609</span>  @Override<a name="line.2609"></a>
+<span class="sourceLineNo">2610</span>  public final String toString()<a name="line.2610"></a>
+<span class="sourceLineNo">2611</span>  {<a name="line.2611"></a>
+<span class="sourceLineNo">2612</span>    if ( Spritz.areNamesEnabled() )<a name="line.2612"></a>
+<span class="sourceLineNo">2613</span>    {<a name="line.2613"></a>
+<span class="sourceLineNo">2614</span>      return getQualifiedName();<a name="line.2614"></a>
+<span class="sourceLineNo">2615</span>    }<a name="line.2615"></a>
+<span class="sourceLineNo">2616</span>    else<a name="line.2616"></a>
+<span class="sourceLineNo">2617</span>    {<a name="line.2617"></a>
+<span class="sourceLineNo">2618</span>      return super.toString();<a name="line.2618"></a>
+<span class="sourceLineNo">2619</span>    }<a name="line.2619"></a>
+<span class="sourceLineNo">2620</span>  }<a name="line.2620"></a>
+<span class="sourceLineNo">2621</span><a name="line.2621"></a>
+<span class="sourceLineNo">2622</span>  /**<a name="line.2622"></a>
+<span class="sourceLineNo">2623</span>   * Build name for Stream.<a name="line.2623"></a>
+<span class="sourceLineNo">2624</span>   * If {@link Spritz#areNamesEnabled()} returns false then this method will return null, otherwise the specified<a name="line.2624"></a>
+<span class="sourceLineNo">2625</span>   * name will be returned or a name synthesized from the prefix if no name is<a name="line.2625"></a>
+<span class="sourceLineNo">2626</span>   * specified.<a name="line.2626"></a>
+<span class="sourceLineNo">2627</span>   *<a name="line.2627"></a>
+<span class="sourceLineNo">2628</span>   * @param name   the name specified by the user.<a name="line.2628"></a>
+<span class="sourceLineNo">2629</span>   * @param prefix the prefix used if this method needs to generate name.<a name="line.2629"></a>
+<span class="sourceLineNo">2630</span>   * @return the name.<a name="line.2630"></a>
+<span class="sourceLineNo">2631</span>   */<a name="line.2631"></a>
+<span class="sourceLineNo">2632</span>  @Nullable<a name="line.2632"></a>
+<span class="sourceLineNo">2633</span>  static String generateName( @Nullable final String name, @Nonnull final String prefix )<a name="line.2633"></a>
+<span class="sourceLineNo">2634</span>  {<a name="line.2634"></a>
+<span class="sourceLineNo">2635</span>    return generateName( name, prefix, null );<a name="line.2635"></a>
+<span class="sourceLineNo">2636</span>  }<a name="line.2636"></a>
+<span class="sourceLineNo">2637</span><a name="line.2637"></a>
+<span class="sourceLineNo">2638</span>  /**<a name="line.2638"></a>
+<span class="sourceLineNo">2639</span>   * Build name for Stream.<a name="line.2639"></a>
+<span class="sourceLineNo">2640</span>   * If {@link Spritz#areNamesEnabled()} returns false then this method will return null, otherwise the specified<a name="line.2640"></a>
+<span class="sourceLineNo">2641</span>   * name will be returned or a name synthesized from the prefix and params if no name is<a name="line.2641"></a>
+<span class="sourceLineNo">2642</span>   * specified.<a name="line.2642"></a>
+<span class="sourceLineNo">2643</span>   *<a name="line.2643"></a>
+<span class="sourceLineNo">2644</span>   * @param name   the name specified by the user.<a name="line.2644"></a>
+<span class="sourceLineNo">2645</span>   * @param prefix the prefix used if this method needs to generate name.<a name="line.2645"></a>
+<span class="sourceLineNo">2646</span>   * @param params a description of parameters used constructing the stream if any.<a name="line.2646"></a>
+<span class="sourceLineNo">2647</span>   * @return the name.<a name="line.2647"></a>
+<span class="sourceLineNo">2648</span>   */<a name="line.2648"></a>
+<span class="sourceLineNo">2649</span>  @Nullable<a name="line.2649"></a>
+<span class="sourceLineNo">2650</span>  static String generateName( @Nullable final String name, @Nonnull final String prefix, @Nullable final String params )<a name="line.2650"></a>
+<span class="sourceLineNo">2651</span>  {<a name="line.2651"></a>
+<span class="sourceLineNo">2652</span>    return Spritz.areNamesEnabled() ?<a name="line.2652"></a>
+<span class="sourceLineNo">2653</span>           null != name ? name : prefix + "(" + ( null == params ? "" : params ) + ")" :<a name="line.2653"></a>
+<span class="sourceLineNo">2654</span>           null;<a name="line.2654"></a>
+<span class="sourceLineNo">2655</span>  }<a name="line.2655"></a>
+<span class="sourceLineNo">2656</span>}<a name="line.2656"></a>
 
 
 

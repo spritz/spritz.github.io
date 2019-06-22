@@ -209,7 +209,8 @@ implements <a href="../spritz/EventEmitter.html" title="interface in spritz">Eve
 <ul class="blockList">
 <li class="blockList">
 <h4>next</h4>
-<pre>public final&nbsp;void&nbsp;<a href="../src-html/spritz/Hub.html#line.61">next</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="../spritz/Hub.html" title="type parameter in Hub">MessageInT</a>&nbsp;item)</pre>
+<pre>public final&nbsp;void&nbsp;<a href="../src-html/spritz/Hub.html#line.58">next</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="../spritz/Hub.html" title="type parameter in Hub">MessageInT</a>&nbsp;item)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../spritz/EventEmitter.html#next-T-">EventEmitter</a></code></span></div>
 <div class="block">Emit a data item.
  This method will be ignored if <a href="../spritz/EventEmitter.html#isDone--"><code>EventEmitter.isDone()</code></a> returns <code>true</code>.</div>
 <dl>
@@ -226,7 +227,8 @@ implements <a href="../spritz/EventEmitter.html" title="interface in spritz">Eve
 <ul class="blockList">
 <li class="blockList">
 <h4>error</h4>
-<pre>public final&nbsp;void&nbsp;<a href="../src-html/spritz/Hub.html#line.79">error</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;error)</pre>
+<pre>public final&nbsp;void&nbsp;<a href="../src-html/spritz/Hub.html#line.73">error</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;error)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../spritz/EventEmitter.html#error-java.lang.Throwable-">EventEmitter</a></code></span></div>
 <div class="block">Emit an error signal.
  This method will be ignored if <a href="../spritz/EventEmitter.html#isDone--"><code>EventEmitter.isDone()</code></a> returns <code>true</code>.</div>
 <dl>
@@ -243,7 +245,8 @@ implements <a href="../spritz/EventEmitter.html" title="interface in spritz">Eve
 <ul class="blockList">
 <li class="blockList">
 <h4>complete</h4>
-<pre>public final&nbsp;void&nbsp;<a href="../src-html/spritz/Hub.html#line.98">complete</a>()</pre>
+<pre>public final&nbsp;void&nbsp;<a href="../src-html/spritz/Hub.html#line.89">complete</a>()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../spritz/EventEmitter.html#complete--">EventEmitter</a></code></span></div>
 <div class="block">Emit a complete signal.
  This method will be ignored if <a href="../spritz/EventEmitter.html#isDone--"><code>EventEmitter.isDone()</code></a> returns <code>true</code>.</div>
 <dl>
@@ -258,7 +261,8 @@ implements <a href="../spritz/EventEmitter.html" title="interface in spritz">Eve
 <ul class="blockListLast">
 <li class="blockList">
 <h4>isDone</h4>
-<pre>public final&nbsp;boolean&nbsp;<a href="../src-html/spritz/Hub.html#line.140">isDone</a>()</pre>
+<pre>public final&nbsp;boolean&nbsp;<a href="../src-html/spritz/Hub.html#line.128">isDone</a>()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../spritz/EventEmitter.html#isDone--">EventEmitter</a></code></span></div>
 <div class="block">Return true if the emitter has emitted an error signal, a complete signal or has been cancelled.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>

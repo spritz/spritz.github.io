@@ -186,7 +186,7 @@ execution data is created when subscriptions occur.
   <li><a href="#transformation">Transformation</a>: Operators that change the form of items and signals passing through the stream</li>
   <li><a href="#merging">Merging</a>: Combining multiple streams into a single stream</li>
   <li><a href="#accumulating">Accumulating</a>: Accumulate items and signals and emit events based on accumulation process</li>
-  <li><a href="#scheduling">Scheduling</a>: Operators that change the <a href="spritz/VirtualProcessorUnit.html" title="class in spritz"><code>VirtualProcessorUnit</code></a> on which events and signals are emitted or the time at which events and signals are emitted</li>
+  <li><a href="#scheduling">Scheduling</a>: Operators that change the <code>VirtualProcessorUnit</code> on which events and signals are emitted or the time at which events and signals are emitted</li>
   <li><a href="#error_handling">Error Handling</a>: Operators that respond to errors</li>
   <li><a href="#unknown">Unknown</a>: Unknown how we should categorize this operator at this stage</li>
 </ul>
@@ -363,11 +363,11 @@ execution data is created when subscriptions occur.
 
 <h3><a name="scheduling">Scheduling</a></h3>
 
-<p>Operators that change the <a href="spritz/VirtualProcessorUnit.html" title="class in spritz"><code>VirtualProcessorUnit</code></a> on which events and signals are emitted or the time at which events and signals are emitted</p>
+<p>Operators that change the <code>VirtualProcessorUnit</code> on which events and signals are emitted or the time at which events and signals are emitted</p>
 
 <ul>
-  <li><a href="spritz/Stream.html#subscribeOn-spritz.VirtualProcessorUnit-"><code>subscribeOn(virtualProcessorUnit)</code></a>: Invoke the <code>Subscriber#onSubscribe(Subscription)</code> on upstream on the specified <code>VirtualProcessorUnit</code></li>
-  <li><a href="spritz/Stream.html#observeOn-spritz.VirtualProcessorUnit-"><code>observeOn(virtualProcessorUnit)</code></a>: Emit signals and item on the specified <code>VirtualProcessorUnit</code></li>
+  <li><a href="spritz/Stream.html#subscribeOn-zemeckis.VirtualProcessorUnit-"><code>subscribeOn(virtualProcessorUnit)</code></a>: Invoke the <code>Subscriber#onSubscribe(Subscription)</code> on upstream on the specified <code>VirtualProcessorUnit</code></li>
+  <li><a href="spritz/Stream.html#observeOn-zemeckis.VirtualProcessorUnit-"><code>observeOn(virtualProcessorUnit)</code></a>: Emit signals and item on the specified <code>VirtualProcessorUnit</code></li>
 </ul>
 
 <h3><a name="error_handling">Error Handling</a></h3>

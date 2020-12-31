@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -157,53 +157,29 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/SpritzTestUtil.html#disableUncaughtErrorHandlers--">disableUncaughtErrorHandlers</a></span>()</code>
-<div class="block">Set `spritz.enable_uncaught_error_handlers` setting to false.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../spritz/SpritzTestUtil.html#enableNames--">enableNames</a></span>()</code>
 <div class="block">Set `spritz.enable_names` setting to true.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/SpritzTestUtil.html#enableUncaughtErrorHandlers--">enableUncaughtErrorHandlers</a></span>()</code>
-<div class="block">Set `spritz.enable_uncaught_error_handlers` setting to true.</div>
-</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/SpritzTestUtil.html#noPurgeTasksWhenRunawayDetected--">noPurgeTasksWhenRunawayDetected</a></span>()</code>
-<div class="block">Set `spritz.purge_tasks_when_runaway_detected` setting to false.</div>
-</td>
-</tr>
-<tr id="i5" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../spritz/SpritzTestUtil.html#noValidateSubscriptions--">noValidateSubscriptions</a></span>()</code>
 <div class="block">Set the `spritz.validate_subscriptions` setting to false.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../spritz/SpritzTestUtil.html#purgeTasksWhenRunawayDetected--">purgeTasksWhenRunawayDetected</a></span>()</code>
-<div class="block">Set `spritz.purge_tasks_when_runaway_detected` setting to true.</div>
-</td>
-</tr>
-<tr id="i7" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../spritz/SpritzTestUtil.html#resetConfig-boolean-">resetConfig</a></span>(boolean&nbsp;productionMode)</code>
 <div class="block">Reset the state of spritz config to either production or development state.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../spritz/SpritzTestUtil.html#setLogger-spritz.SpritzTestUtil.Logger-">setLogger</a></span>(<a href="../spritz/SpritzTestUtil.Logger.html" title="interface in spritz">SpritzTestUtil.Logger</a>&nbsp;logger)</code>
 <div class="block">Specify logger to use to capture logging in tests</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../spritz/SpritzTestUtil.html#validateSubscriptions--">validateSubscriptions</a></span>()</code>
 <div class="block">Set `spritz.validate_subscriptions` setting to true.</div>
@@ -251,7 +227,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>setLogger</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.75">setLogger</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a> <a href="../spritz/SpritzTestUtil.Logger.html" title="interface in spritz">SpritzTestUtil.Logger</a>&nbsp;logger)</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.70">setLogger</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a> <a href="../spritz/SpritzTestUtil.Logger.html" title="interface in spritz">SpritzTestUtil.Logger</a>&nbsp;logger)</pre>
 <div class="block">Specify logger to use to capture logging in tests</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -265,7 +241,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>enableNames</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.94">enableNames</a>()</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.89">enableNames</a>()</pre>
 <div class="block">Set `spritz.enable_names` setting to true.</div>
 </li>
 </ul>
@@ -275,48 +251,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>disableNames</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.102">disableNames</a>()</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.97">disableNames</a>()</pre>
 <div class="block">Set `spritz.enable_names` setting to false.</div>
-</li>
-</ul>
-<a name="purgeTasksWhenRunawayDetected--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>purgeTasksWhenRunawayDetected</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.120">purgeTasksWhenRunawayDetected</a>()</pre>
-<div class="block">Set `spritz.purge_tasks_when_runaway_detected` setting to true.</div>
-</li>
-</ul>
-<a name="noPurgeTasksWhenRunawayDetected--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>noPurgeTasksWhenRunawayDetected</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.128">noPurgeTasksWhenRunawayDetected</a>()</pre>
-<div class="block">Set `spritz.purge_tasks_when_runaway_detected` setting to false.</div>
-</li>
-</ul>
-<a name="enableUncaughtErrorHandlers--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>enableUncaughtErrorHandlers</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.146">enableUncaughtErrorHandlers</a>()</pre>
-<div class="block">Set `spritz.enable_uncaught_error_handlers` setting to true.</div>
-</li>
-</ul>
-<a name="disableUncaughtErrorHandlers--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>disableUncaughtErrorHandlers</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.154">disableUncaughtErrorHandlers</a>()</pre>
-<div class="block">Set `spritz.enable_uncaught_error_handlers` setting to false.</div>
 </li>
 </ul>
 <a name="validateSubscriptions--">
@@ -325,7 +261,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>validateSubscriptions</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.172">validateSubscriptions</a>()</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.115">validateSubscriptions</a>()</pre>
 <div class="block">Set `spritz.validate_subscriptions` setting to true.</div>
 </li>
 </ul>
@@ -335,7 +271,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>noValidateSubscriptions</h4>
-<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.180">noValidateSubscriptions</a>()</pre>
+<pre>public static&nbsp;void&nbsp;<a href="../src-html/spritz/SpritzTestUtil.html#line.123">noValidateSubscriptions</a>()</pre>
 <div class="block">Set the `spritz.validate_subscriptions` setting to false.</div>
 </li>
 </ul>

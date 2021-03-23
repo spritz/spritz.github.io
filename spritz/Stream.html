@@ -2732,7 +2732,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="../spritz/Stream.html" title="class i
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public final&nbsp;<a href="../spritz/Stream.html" title="class in spritz">Stream</a>&lt;<a href="../spritz/Stream.html" title="type parameter in Stream">T</a>&gt;&nbsp;<a href="../src-html/spritz/Stream.html#line.1369">last</a>()</pre>
 <div class="block">Drop all items except for the last item.
  Once the complete signal has been received the operator will emit the last item received
- if any prior to sending the complete signal. This is equivalent to invoking the <a href="../spritz/Stream.html#last-int-"><code>last(int)</code></a>
+ if any prior to emitting the complete signal. This is equivalent to invoking the <a href="../spritz/Stream.html#last-int-"><code>last(int)</code></a>
  method and passing the value <code>1</code> to the parameter <code>maxElements</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -2789,7 +2789,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="../spritz/Stream.html" title="class i
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public final&nbsp;<a href="../spritz/Stream.html" title="class in spritz">Stream</a>&lt;<a href="../spritz/Stream.html" title="type parameter in Stream">T</a>&gt;&nbsp;<a href="../src-html/spritz/Stream.html#line.1415">last</a>(int&nbsp;maxElements)</pre>
 <div class="block">Drop all items except for the last <code>maxElements</code> items.
  This operator will buffer up to <code>maxElements</code> items until it receives the complete
- signal and then it will send all the buffered items and the complete signal. If less than
+ signal and then it will emit all the buffered items and the complete signal. If less than
  <code>maxElements</code> are emitted by the upstream then it is possible for the downstream to receive
  less than <code>maxElements</code> items.</div>
 <dl>
@@ -2810,7 +2810,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="../spritz/Stream.html" title="class i
                                      int&nbsp;maxElements)</pre>
 <div class="block">Drop all items except for the last <code>maxElements</code> items.
  This operator will buffer up to <code>maxElements</code> items until it receives the complete
- signal and then it will send all the buffered items and the complete signal. If less than
+ signal and then it will emit all the buffered items and the complete signal. If less than
  <code>maxElements</code> are emitted by the upstream then it is possible for the downstream to receive
  less than <code>maxElements</code> items.</div>
 <dl>
@@ -2831,7 +2831,7 @@ public static&nbsp;&lt;T&gt;&nbsp;<a href="../spritz/Stream.html" title="class i
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a> public final&nbsp;<a href="../spritz/Stream.html" title="class in spritz">Stream</a>&lt;<a href="../spritz/Stream.html" title="type parameter in Stream">T</a>&gt;&nbsp;<a href="../src-html/spritz/Stream.html#line.1451">takeLast</a>(int&nbsp;maxElements)</pre>
 <div class="block">Drop all items except for the last <code>maxElements</code> items.
  This operator will buffer up to <code>maxElements</code> items until it receives the complete
- signal and then it will send all the buffered items and the complete signal. If less than
+ signal and then it will emit all the buffered items and the complete signal. If less than
  <code>maxElements</code> are emitted by the upstream then it is possible for the downstream to receive
  less than <code>maxElements</code> items. This method is an alias for the <a href="../spritz/Stream.html#last-int-"><code>last(int)</code></a> method.</div>
 <dl>
